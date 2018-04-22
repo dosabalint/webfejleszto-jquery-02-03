@@ -14,13 +14,15 @@ $(function() {
     let percent = Math.round(CountFilledInputs() / CountInputs() * 100);
     UpdateProgressBar(percent);
 
-    if(percent == 100){
+    if (percent == 100) {
       $button.prop('disabled', false);
+    } else {
+      $button.prop('disabled', true);
     }
   });
 
   // submitra reagálás
-  $button.click(function(event){
+  $button.click(function(event) {
     // alapértelmezett működés megakasztása
     event.preventDefault();
 
